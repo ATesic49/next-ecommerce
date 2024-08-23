@@ -26,7 +26,6 @@ async function addProduct(formData: FormData) {
     },
   });
 }
-redirect("/");
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
