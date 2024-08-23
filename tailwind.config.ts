@@ -1,3 +1,4 @@
+import daisyui from "daisyui";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -6,15 +7,32 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
+  daisyui: {
+    themes: [
+      "cmyk",
+      // {
+      //   mytheme: {
+      //     primary: "#00ccba",
+
+      //     secondary: "#009d7d",
+
+      //     accent: "#0000ff",
+
+      //     neutral: "#0c0e09",
+
+      //     "base-100": "#fff9fe",
+
+      //     info: "#f5c022",
+
+      //     success: "#00c47d",
+
+      //     warning: "#f27600",
+
+      //     error: "#ff6a88",
+      //   },
+      // },
+    ],
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;
