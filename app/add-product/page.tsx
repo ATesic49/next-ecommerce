@@ -25,6 +25,7 @@ async function addProduct(formData: FormData) {
       imageUrl,
     },
   });
+  redirect("/");
 }
 
 export default async function Home() {
